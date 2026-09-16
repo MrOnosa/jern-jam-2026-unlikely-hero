@@ -10,3 +10,10 @@ texture = ExtResource("1_4ignj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=119557473]
 position = Vector2(960, 540)
+
+[node name="Button" type="Button" parent="." unique_id=2063073948]
+offset_left = 1010.0
+offset_top = 722.0
+offset_right = 1046.0
+offset_bottom = 776.0
+text = "win"
