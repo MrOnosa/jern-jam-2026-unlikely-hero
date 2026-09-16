@@ -53,4 +53,4 @@ jobs:
           echo "${{ secrets.BUTLER_API_KEY }}" > ~/.config/itch/butler_creds
 
       - name: Upload to Itch
-        run: ./butler push ./build mronosa/jern-jam-26:web
+        run: ./butler push ./build mronosa/jern-jam-26:html5
