@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d0bvxrp5durnw"]
+
+[ext_resource type="PackedScene" uid="uid://csupmwcbna2hr" path="res://scenes/hero.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://bpw4wxkrqckoc" path="res://assets/title-screen.png" id="2_yqjtg"]
+
+[node name="game" type="Node2D" unique_id=2003437598]
+
+[node name="TitleScreen" type="Sprite2D" parent="." unique_id=1786471996]
+position = Vector2(-104, -308)
+texture = ExtResource("2_yqjtg")
+
+[node name="Hero" parent="." unique_id=2034602558 instance=ExtResource("1_uwrxv")]
+position = Vector2(0, -128)
+
+[node name="Camera2D" type="Camera2D" parent="Hero" unique_id=1824885150]
