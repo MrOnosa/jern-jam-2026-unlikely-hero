@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ckbbq064g8icx"]
+
+[ext_resource type="Texture2D" uid="uid://bftkixq41axre" path="res://assets/desk.png" id="1_0iqh6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nqmf2"]
+radius = 136.0
+height = 702.0
+
+[node name="Desk" type="Area2D" unique_id=1480475863]
+
+[node name="DeskSprite" type="Sprite2D" parent="." unique_id=713408678]
+position = Vector2(0, -118)
+texture = ExtResource("1_0iqh6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1837191740]
+position = Vector2(0, -116)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2133259814]
+polygon = PackedVector2Array(-320, -2, -319, 78, -284, 115, 318, 115, 319, -1)
+
+[node name="BehindDeskCollisionShape2D" type="CollisionShape2D" parent="." unique_id=1782961029]
+position = Vector2(0, -192)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_nqmf2")

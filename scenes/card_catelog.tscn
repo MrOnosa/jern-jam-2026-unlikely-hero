@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c2n6xke431kb5"]
+
+[ext_resource type="Texture2D" uid="uid://b6n6fab38rlee" path="res://assets/card-catalog.png" id="1_u5qbj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cynf1"]
+size = Vector2(153, 200)
+
+[node name="CardCatelog" type="Area2D" unique_id=1670504822]
+
+[node name="CardCatalog" type="Sprite2D" parent="." unique_id=1461348131]
+position = Vector2(0, -230)
+texture = ExtResource("1_u5qbj")
+
+[node name="InFrontOfCardCatalogCollisionShape2D" type="CollisionShape2D" parent="." unique_id=1153097378]
+position = Vector2(1.9999989, 36.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_cynf1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=150646874]
+position = Vector2(0, -231)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1481529905]
+polygon = PackedVector2Array(105, 229, -70, 230, -97, 186, -98, 57, 108, 57)
