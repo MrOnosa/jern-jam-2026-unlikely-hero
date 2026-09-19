@@ -1,6 +1,8 @@
-class_name Shelf
-extends Area2D
+class_name Game
+extends Node2D
 
+#TODO: Opening, main game, end of day state with a score
+#So, add a timer, opening scene, etc
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

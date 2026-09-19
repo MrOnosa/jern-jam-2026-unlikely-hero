@@ -1,49 +1,130 @@
 [gd_scene format=3 uid="uid://d0bvxrp5durnw"]
 
+[ext_resource type="Script" uid="uid://32pratujyg5m" path="res://scenes/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://csupmwcbna2hr" path="res://scenes/hero.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://ckbbq064g8icx" path="res://scenes/desk.tscn" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://c35byw2l45mmi" path="res://scenes/shelf.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://c2n6xke431kb5" path="res://scenes/card_catelog.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dxhl2d2qp8ptc" path="res://scenes/book.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://dl3ui5jd7nqdu" path="res://resources/shelf.gd" id="6_u5sy4"]
+
+[sub_resource type="Resource" id="Resource_xj574"]
+script = ExtResource("6_u5sy4")
+name = &"Computer science, information and general works"
+category = &"0"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_00mi8"]
+script = ExtResource("6_u5sy4")
+name = &"Philosophy and psychology"
+category = &"1"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_u5sy4"]
+script = ExtResource("6_u5sy4")
+name = &"Religion"
+category = &"2"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_gee14"]
+script = ExtResource("6_u5sy4")
+name = &"Social sciences"
+category = &"3"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_0tnpc"]
+script = ExtResource("6_u5sy4")
+name = &"Language"
+category = &"4"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_vtaks"]
+script = ExtResource("6_u5sy4")
+name = &"Pure science"
+category = &"5"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_kvpfn"]
+script = ExtResource("6_u5sy4")
+name = &"Technology"
+category = &"6"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_dinhu"]
+script = ExtResource("6_u5sy4")
+name = &"Arts and recreation"
+category = &"7"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_kvuet"]
+script = ExtResource("6_u5sy4")
+name = &"Literature"
+category = &"8"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
+
+[sub_resource type="Resource" id="Resource_trtic"]
+script = ExtResource("6_u5sy4")
+name = &"History and geography"
+category = &"9"
+metadata/_custom_type_script = "uid://dl3ui5jd7nqdu"
 
 [node name="game" type="Node2D" unique_id=2003437598]
 y_sort_enabled = true
+script = ExtResource("1_p57ef")
 
 [node name="Hero" parent="." unique_id=2034602558 instance=ExtResource("1_uwrxv")]
-position = Vector2(0, -128)
+position = Vector2(-95, -292)
+
+[node name="Book" parent="Hero" unique_id=1829232315 instance=ExtResource("5_iywne")]
+z_index = 1
+position = Vector2(-3, -95)
 
 [node name="Camera2D" type="Camera2D" parent="Hero" unique_id=1824885150]
 
 [node name="Desk" parent="." unique_id=1480475863 instance=ExtResource("2_iywne")]
 
-[node name="Shelf" parent="." unique_id=1313138405 instance=ExtResource("4_iywne")]
-position = Vector2(759, 383)
+[node name="Shelf000" parent="." unique_id=1313138405 instance=ExtResource("4_iywne")]
+position = Vector2(759, 384)
+shelf = SubResource("Resource_xj574")
 
-[node name="Shelf2" parent="." unique_id=1067517117 instance=ExtResource("4_iywne")]
+[node name="Shelf100" parent="." unique_id=1067517117 instance=ExtResource("4_iywne")]
 position = Vector2(1227, 389)
+shelf = SubResource("Resource_00mi8")
 
-[node name="Shelf3" parent="." unique_id=530639597 instance=ExtResource("4_iywne")]
+[node name="Shelf200" parent="." unique_id=530639597 instance=ExtResource("4_iywne")]
 position = Vector2(1678, 393)
+shelf = SubResource("Resource_u5sy4")
 
-[node name="Shelf4" parent="." unique_id=2090291647 instance=ExtResource("4_iywne")]
+[node name="Shelf300" parent="." unique_id=2090291647 instance=ExtResource("4_iywne")]
 position = Vector2(2192, 396)
+shelf = SubResource("Resource_gee14")
 
-[node name="Shelf5" parent="." unique_id=444358149 instance=ExtResource("4_iywne")]
+[node name="Shelf400" parent="." unique_id=444358149 instance=ExtResource("4_iywne")]
 position = Vector2(2673, 399)
+shelf = SubResource("Resource_0tnpc")
 
-[node name="Shelf6" parent="." unique_id=134288054 instance=ExtResource("4_iywne")]
+[node name="Shelf500" parent="." unique_id=134288054 instance=ExtResource("4_iywne")]
 position = Vector2(745, 1355)
+shelf = SubResource("Resource_vtaks")
 
-[node name="Shelf7" parent="." unique_id=784805097 instance=ExtResource("4_iywne")]
+[node name="Shelf600" parent="." unique_id=784805097 instance=ExtResource("4_iywne")]
 position = Vector2(1200, 1366)
+shelf = SubResource("Resource_kvpfn")
 
-[node name="Shelf8" parent="." unique_id=889627618 instance=ExtResource("4_iywne")]
+[node name="Shelf700" parent="." unique_id=889627618 instance=ExtResource("4_iywne")]
 position = Vector2(1667, 1353)
+shelf = SubResource("Resource_dinhu")
 
-[node name="Shelf9" parent="." unique_id=1775073851 instance=ExtResource("4_iywne")]
+[node name="Shelf800" parent="." unique_id=1775073851 instance=ExtResource("4_iywne")]
 position = Vector2(2174, 1360)
+shelf = SubResource("Resource_kvuet")
 
-[node name="Shelf10" parent="." unique_id=1023444261 instance=ExtResource("4_iywne")]
+[node name="Shelf900" parent="." unique_id=1023444261 instance=ExtResource("4_iywne")]
 position = Vector2(2660, 1358)
+shelf = SubResource("Resource_trtic")
 
 [node name="CardCatelog" parent="." unique_id=1670504822 instance=ExtResource("4_lbhrr")]
 position = Vector2(-989, 25)
+
+[node name="ToDoWallClockNode2D" type="Node2D" parent="." unique_id=1809919486]
+position = Vector2(130, -699)

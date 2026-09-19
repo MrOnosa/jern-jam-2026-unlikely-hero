@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dxhl2d2qp8ptc"]
+
+[ext_resource type="Script" uid="uid://cd64f7lwaxo64" path="res://scenes/physical_book.gd" id="1_3wpgy"]
+[ext_resource type="Texture2D" uid="uid://ckvb1gbb1ve13" path="res://assets/book.png" id="1_ble1a"]
+
+[node name="Node2D" type="Node2D" unique_id=912822966]
+script = ExtResource("1_3wpgy")
+
+[node name="Book" type="Sprite2D" parent="." unique_id=1829232315]
+position = Vector2(0, -23)
+texture = ExtResource("1_ble1a")

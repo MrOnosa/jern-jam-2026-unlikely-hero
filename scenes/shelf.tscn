@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c35byw2l45mmi"]
 
 [ext_resource type="Texture2D" uid="uid://drqpmvn3ulthw" path="res://assets/shelf.png" id="1_eyi4x"]
-[ext_resource type="Script" uid="uid://c8vnej46acxm3" path="res://scenes/shelf.gd" id="1_xj574"]
+[ext_resource type="Script" uid="uid://c8vnej46acxm3" path="res://scenes/physical_shelf.gd" id="1_xj574"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cetag"]
 radius = 112.65
@@ -11,16 +11,19 @@ height = 616.0
 script = ExtResource("1_xj574")
 
 [node name="Shelf" type="Sprite2D" parent="." unique_id=134926053]
-position = Vector2(0, -328)
+position = Vector2(29, -361)
 texture = ExtResource("1_eyi4x")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1714245627]
-position = Vector2(0, -327)
+position = Vector2(29, -360)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1277200392]
 position = Vector2(-9, -462)
-polygon = PackedVector2Array(16, 174, -2, 201, 2, 786, 76, 788, 96, 767, 96, 174)
+polygon = PackedVector2Array(16, 174, -20, 237, -20, 821, 101, 820, 112, 801, 112, 174)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1826361138]
-position = Vector2(-30, -308)
+position = Vector2(-15, -308)
 shape = SubResource("CapsuleShape2D_cetag")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
